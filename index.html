@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Restaurant Finder | No API Key Needed</title>
+    <title>Restaurant Finder | No API Key Needed</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,51 +11,36 @@
 <body>
     <div class="container">
         <header>
-            <h1><i class="fas fa-utensils"></i> Global Restaurant Finder</h1>
-            <p>Discover restaurants in any city worldwide — <strong>100% free, no signup!</strong></p>
+            <h1><i class="fas fa-utensils"></i> Restaurant Finder</h1>
+            <p>Discover great places to eat near you — <strong>no signup required!</strong></p>
         </header>
 
         <div class="search-form">
             <div class="form-group">
-                <label for="city"><i class="fas fa-city"></i> City</label>
-                <input type="text" id="city" placeholder="Start typing a city..." list="city-suggestions" required>
-                <datalist id="city-suggestions"></datalist>
+                <label for="location"><i class="fas fa-map-marker-alt"></i> Location</label>
+                <input type="text" id="location" placeholder="e.g., New York, Berlin, or 123 Main St" required>
             </div>
             <div class="form-group">
                 <label for="cuisine"><i class="fas fa-utensil-spoon"></i> Cuisine (optional)</label>
-                <input type="text" id="cuisine" placeholder="e.g., Italian, Sushi, Vegan">
+                <input type="text" id="cuisine" placeholder="e.g., Pizza, Sushi, Burgers">
             </div>
             <button id="search-btn"><i class="fas fa-search"></i> Find Restaurants</button>
         </div>
 
-        <div class="filters">
-            <div class="filter-group">
-                <label for="sort"><i class="fas fa-sort"></i> Sort By</label>
-                <select id="sort">
-                    <option value="name">Name (A-Z)</option>
-                    <option value="rating">Rating</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="results-container">
-            <div class="results-header">
-                <h2 id="results-title">Restaurants</h2>
-                <span id="results-count">0 found</span>
-            </div>
-            <div class="results" id="results"></div>
+        <div class="results" id="results">
+            <!-- Results will appear here -->
         </div>
 
         <div class="loading" id="loading">
             <div class="spinner"></div>
-            <p>Searching restaurants worldwide...</p>
+            <p>Searching for restaurants...</p>
         </div>
 
         <div class="error" id="error"></div>
     </div>
 
     <footer>
-        <p>Powered by <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>, <a href="https://overpass-api.de/" target="_blank">Overpass API</a>, and <a href="https://geocode.maps.co/" target="_blank">Geocode Maps</a></p>
+        <p>Powered by <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> & <a href="https://overpass-api.de/" target="_blank">Overpass API</a></p>
     </footer>
 
     <script src="script.js"></script>
