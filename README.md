@@ -17,4 +17,7 @@ Deployed in Docker with HAProxy load balancing across two containers.
 - Image: **nkubajr/restaurant-finder:v1**  
 - Repo: [Docker Hub](https://hub.docker.com/r/nkubajr/restaurant-finder)
 
+- Visit frontend: http://localhost:8082
+- Video demo link: 
+
 
